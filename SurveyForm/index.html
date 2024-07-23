@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
 
+<!-- You should have a page title in an h1 element with an id of title  -->
+    <h1 id="title">Survey Form</h1>
+
+
+ <!-- You should have a short explanation in a p element with an id of description    -->
+    <p id="description">Please fill out this survey form with the required information</p>
+
+<!-- You should have a form element with an id of survey-form -->
+    <form method="post" id="survey-form" type="text" action='https://register-demo.freecodecamp.org'>
+
+<!-- Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text -->
+      <label for="name" id="name-label">You are required to enter your name: <input name="name" id="name" type="text" placeholder="name" required></label>
+
+
+<!-- Inside the form element, you are required to enter your email in an input field that has an id of email -->
+
+<!-- If you enter an email that is not formatted correctly, you will see an HTML5 validation error -->
+      <label for="email" id="email-label">You are required to enter your email: <input id="email" type="email" pattern=".*@.*\..*" placeholder="email" required> <br> If you enter an email that is not formatted correctly, you will see an HTML5 validation error</label>
+
+
+<!-- Inside the form, you can enter a number in an input field that has an id of number -->
+<!-- The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5 validation error (depending on your browser). -->
+<!-- If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will see an HTML5 validation error -->
+      <label for="number" id="number-label">You can enter a number: <input  name="number" id="number" type="number" min="0" max="100" placeholder="number" pattern="\d*"> <br>It can't be a non-number</label>
+
+
+<!-- For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label" -->
+<!-- For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field -->
+
+
+<!-- Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from -->
+        <label for="referrer">How did you hear about us?
+          <select id="dropdown" name="referrer">
+            <option value="1">them</option>
+            <option value="2">him</option>
+            <option value="3">her</option>
+            <option value="4">you</option>
+          </select>
+        </label>
+
+<!-- Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute -->
+      <fieldset>
+        <legend>Pick your poison</legend>
+        <label for="personal-account"><input value="1" class="choice" id="radio" type="radio" name="account-type" checked /> frog</label>
+        <label for="business-account"><input value="2" class="choice" id="radio" type="radio" name="account-type" /> snake</label>
+        <label for="business-account"><input value="3" class="choice" id="radio" type="radio" name="account-type" /> cat</label>
+      </fieldset>
+
+<!-- 
+Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute -->
+      <fieldset>
+        <legend>Diseases</legend>
+        <label for="account"> <input class="choice" value="1" id="radio" type="checkbox" name="account" checked />cancer</label>
+        <label for="account" ><input class="choice" value="2" id="radio" type="checkbox" name="account" />AIDs</label>
+        <label for="account"> <input class="choice" value="3" id="radio" type="checkbox" name="account"/>Malaria</label>
+        <label for="account"><input class="choice" value="4" id="radio" type="checkbox" name="account" />COVID-19</label>
+      </fieldset>
+
+<!-- 
+Inside the form element, you are presented with a textarea for additional comments -->
+<label for="comments">Additional Comments:
+          <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Additional comments..."></textarea>
+        </label>
+
+<!-- Inside the form element, you are presented with a button with id of submit to submit all the inputs -->
+<input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
