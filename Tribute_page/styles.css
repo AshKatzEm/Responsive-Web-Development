@@ -1,1 +1,41 @@
+/* Your #image should use max-width and height properties to resize responsively, relative to the width of its parent element, without exceeding its original size */
+#image {
+    max-width: 75%;
+    max-height: 75%;
 
+}
+/* Your img element should be centered within its parent element */
+img {
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+
+#img-div {
+    display: block;
+    margin: auto;
+}
+
+figcaption{
+    text-align: center;
+    margin-bottom: -50px;
+    mix-blend-mode: difference;
+    filter: invert(1);
+    
+}
+h1, h2 {
+    text-align: center;
+    word-wrap: break-word ;
+    padding-left: 12%;
+    padding-right: 12%;  
+
+}
+
+p{
+    text-align: left;
+    word-wrap: break-word ;
+    text-indent: 20px;
+    padding-left: 12%;
+    padding-right: 12%;    
+
+}
