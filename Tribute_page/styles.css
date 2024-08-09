@@ -21,6 +21,7 @@ figcaption{
     margin-bottom: -50px;
     mix-blend-mode: difference;
     filter: invert(1);
+    background-color: line;
     
 }
 h1, h2 {
