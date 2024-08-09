@@ -13,48 +13,37 @@ Note: Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to l
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-        <h1>SQL Documentation</h1>
-      <!-- You can see a nav element with a corresponding id="navbar" -->
       <nav id="navbar">     
-<!-- The navbar element should contain one header element which contains text that describes the topic of the technical documentation -->
-<!-- The header element in the #navbar must come before any link (a) elements in the navbar -->
-        <ul>
-            <!-- Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section -->
-             <!-- Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world") -->
-              <!-- When you click on a navbar element, the page should navigate to the corresponding section of the #main-doc element (e.g. If you click on a .nav-link element that contains the text "Hello world", the page navigates to a section element with that id, and contains the corresponding header) -->
+        <header class="nav-head">SQL Documentation</header>
 
-          <li><a href="#what_is_sql" class="nav-link">What is SQL?</a></li>
-          <li><a href="#sql_statements" class="nav-link">SQL Statements</a></li>
-          <li><a href="#the_sql_select_statement" class="nav-link">The SQL SELECT Statement</a></li>
-          <li><a href="#the_sql_select_distinct_statement" class="nav-link">The SQL SELECT DISTINCT Statement</a></li>
-          <li><a href="#count_distinct" class="nav-link">Count Distict</a></li>
+        <ul>
+          <li><a href="#What_is_SQL?" class="nav-link">What is SQL?</a></li>
+          <li><a href="#SQL_Statements" class="nav-link">SQL Statements</a></li>
+          <li><a href="#The_SQL_SELECT_Statement" class="nav-link">The SQL SELECT Statement</a></li>
+          <li><a href="#The_SQL_SELECT_DISTINCT_Statement" class="nav-link">The SQL SELECT DISTINCT Statement</a></li>
+          <li><a href="#Count_Distinct" class="nav-link">Count Distinct</a></li>
         </ul>
       </nav>
-    </header>
 
-    
+
+
+
     <!-- 
 You can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation) -->
         <main id="main-doc">
 
-            <!-- 
-Within the #main-doc element, you can see several section elements, each with a class of main-section. There should be a minimum of five -->
-<!-- Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java") -->
-            <section class="main-section" id="what_is_sql">
+            <section class="main-section" id="What_is_SQL?">
 
-                <!-- The first element within each .main-section should be a header element, which contains text that describes the topic of that section. -->
-                 <h2>What is SQL?</h2>
+                 <header>What is SQL?</header>
 
 
-                 <!-- The .main-section elements should contain at least five li items total (not each) -->
                  <ul>
                     <li>SQL stands for Structured Query Language</li>
                     <li>SQL lets you access and manipulate databases</li>
                     <li>SQL became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987</li>
                  </ul> 
 
-                 <!-- The .main-section elements should contain at least ten p elements total (not each) -->
+                 
                  <p>Although SQL is an ANSI/ISO standard, there are different versions of the SQL language.</p>
                  <p>However, to be compliant with the ANSI standard, they all support at least the major commands (such as SELECT, UPDATE, DELETE, INSERT, WHERE) in a similar manner.</p>
 
@@ -64,26 +53,22 @@ Within the #main-doc element, you can see several section elements, each with a 
                     
                     The data in RDBMS is stored in database objects called tables. A table is a collection of related data entries and it consists of columns and rows, like this "Customers" table:.</p>
 
-                 <!-- The .main-section elements should contain at least five code elements total (not each) -->
                  <code>SELECT * FROM Customers;</code>
 
 
             </section>
 
-            <section class="main-section" id="sql_statements">
+            <section class="main-section" id="SQL_Statements">
 
-                <!-- The first element within each .main-section should be a header element, which contains text that describes the topic of that section. -->
-                 <h2>SQL Statements</h2>
+                 <header>SQL Statements</header>
 
-                 <!-- The .main-section elements should contain at least ten p elements total (not each) -->
+                 
                  <p>Most of the actions you need to perform on a database are done with SQL statements.</p>
                  <p>SQL statements consists of keywords that are easy to understand.</p>
                  <p>The following SQL statement returns all records from a table named "Customers":</p>
 
-                 <!-- The .main-section elements should contain at least five code elements total (not each) -->
                  <code>SELECT * FROM Customers;</code>
 
-                 <!-- The .main-section elements should contain at least five li items total (not each) -->
                  <ul>
                  <li>SQL keywords are NOT case sensitive: <code>select</code> is the same as <code>SELECT</code></li>
                   <li>SELECT - extracts data from a database</li>
@@ -100,19 +85,16 @@ Within the #main-doc element, you can see several section elements, each with a 
                  </ul> 
             </section>
 
-            <section class="main-section" id="the_sql_select_statement">
+            <section class="main-section" id="The_SQL_SELECT_Statement">
 
-                <!-- The first element within each .main-section should be a header element, which contains text that describes the topic of that section. -->
-                 <h2>The SQL SELECT Statement</h2>
+                 <header>The SQL SELECT Statement</header>
 
-                 <!-- The .main-section elements should contain at least ten p elements total (not each) -->
+                 
                  <p>The <code>SELECT</code> statement is used to select data from a database.</p>
                  <p></p>
 
-                 <!-- The .main-section elements should contain at least five code elements total (not each) -->
                  <code>SELECT CustomerName, City, column1, column2, ...FROM Customers;</code>
 
-                 <!-- The .main-section elements should contain at least five li items total (not each) -->
                  <ul>
                  <li>Here, column1, column2, ... are the field names of the table you want to select data from.</li>
                   <li>The table_name represents the name of the table you want to select data from.</li>
@@ -120,31 +102,27 @@ Within the #main-doc element, you can see several section elements, each with a 
             </section>
 
 
-            <section class="main-section" id="the_sql_select_distinct_statement">
+            <section class="main-section" id="The_SQL_SELECT_DISTINCT_Statement">
 
-                <!-- The first element within each .main-section should be a header element, which contains text that describes the topic of that section. -->
-                 <h2>The SQL SELECT DISTINCT Statement</h2>
+                 <header>The SQL SELECT DISTINCT Statement</header>
 
-                 <!-- The .main-section elements should contain at least ten p elements total (not each) -->
+                 
                  <p>The <code>SELECT DISTINCT</code> statement is used to return only distinct (different) values.</p>
                  <p>Select all the different countries from the "Customers" table:</p>
 
-                 <!-- The .main-section elements should contain at least five code elements total (not each) -->
                  <code>SELECT DISTINCT Country FROM Customers;</code>
 
             </section>
 
 
-            <section class="main-section" id="count_distinct">
+            <section class="main-section" id="Count_Distinct">
 
-                <!-- The first element within each .main-section should be a header element, which contains text that describes the topic of that section. -->
-                 <h2>Count Distinct</h2>
+                 <header>Count Distinct</header>
 
-                 <!-- The .main-section elements should contain at least ten p elements total (not each) -->
+                 
                  <p>By using the <code>DISTINCT</code>> keyword in a function called <code>COUNT</code>, we can return the number of different countries.</p>
                  <p>The COUNT(DISTINCT column_name) is not supported in Microsoft Access databases.</p>
 
-                 <!-- The .main-section elements should contain at least five code elements total (not each) -->
                  <code>SELECT COUNT(DISTINCT Country) FROM Customers;</code>
             </section>
 
